@@ -134,6 +134,7 @@ MathQuiz1.addEventListener('submit', e => {
       Response1.querySelector('span').textContent = 'Sorry, you are not qualified to answer the next quiz';
     }else{
       NextQuiz.disabled = false;
+      Home.disabled = true;
       Response1.querySelector('span').classList.add('alert', 'alert-success')
       Response1.querySelector('span').textContent = 'Congratulations!, you qualified to answer the next quiz';
     }
@@ -165,6 +166,7 @@ const ScienceVideo = document.querySelector('.ScienceVideo')
 const StudentName1 = document.querySelector('.StudentName1')
 const StudentEmail1 = document.querySelector('.StudentEmail1')
 NextQuiz.addEventListener('click', e => {
+  Home.disabled = false;
   const name1 = form2.fname.value;
   const email1 = form2.email1.value;
   MathVideo.classList.add('d-none');
@@ -196,7 +198,7 @@ ScienceQuiz2.addEventListener('submit', e =>{
       }
     });
     StudentScoreSci.querySelector('span').textContent = score1 + '%';
-      ScoreResultSci.classList.remove('d-none');
+    ScoreResultSci.classList.remove('d-none');
     ScienceQuiz.classList.add('d-none');
     if(score1 < 60){
       Response2.querySelector('span').classList.add('alert', 'alert-danger')
