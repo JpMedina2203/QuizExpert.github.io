@@ -156,7 +156,7 @@ MathQuiz1.reset();
 form2.email1.classList.remove('error', 'success');
 form2.fname.classList.remove('error', 'success');
 music.pause();
-Response1.querySelector('span').classList.remove('alert', 'alert-success', 'alert-success')
+Response1.querySelector('span').classList.remove('alert', 'alert-success', 'alert-danger')
 Response1.querySelector('span').textContent = '';
 });
 
@@ -177,7 +177,7 @@ NextQuiz.addEventListener('click', e => {
   ScienceQuiz.classList.remove('d-none');
   StudentName1.textContent = 'Student Name: ' + name1;
   StudentEmail1.textContent = 'Student Email: ' + email1;
-  Response1.querySelector('span').classList.remove('alert', 'alert-success', 'alert-success')
+  Response1.querySelector('span').classList.remove('alert', 'alert-success', 'alert-danger')
   Response1.querySelector('span').textContent = '';
 });
 
@@ -226,4 +226,6 @@ Home1.addEventListener('click', e =>{
   form2.fname.classList.remove('error', 'success');
   music.pause();  
   ScienceQuiz2.reset();
+  Response2.querySelector('span').classList.remove('alert', 'alert-success', 'alert-danger')
+  Response2.querySelector('span').textContent = '';
 })
