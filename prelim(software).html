@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+
+  <style>
+    .success{
+      border: 5px solid limegreen;
+    }
+    .error{
+      border: 5px solid crimson;
+    }
+    #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  }
+  .content{
+    position: relative;
+  }
+  label{
+    position: relative;
+    color: white;
+  }
+  </style>
+</head>
+<body>
+
+  <video autoplay muted loop playsinline id="myVideo" class="OpenVideo">
+    <source src="question mark video.mp4" type="video/mp4">
+  </video>
+ 
+  <video muted loop playsinline id="myVideo" class="d-none MathVideo">
+    <source src="MathBackground.mp4" type="video/mp4">
+  </video>
+
+  <video muted loop playsinline id="myVideo" class="d-none ScienceVideo">
+    <source src="Background video featuring the solar system.mp4" type="video/mp4">
+  </video>
+
+
+  <audio loop id="music">
+    <source src="QuizBackgroundMusic.mp3" type="audio/mpeg">
+  </audio>
+  <nav class="navbar navbar-expand-lg text-bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-warning" href="#">QUIZ EXPERT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- STEP 1 -->
+<div class="container text-center Intro">
+  <div class="row">
+    <div class="col align-self-center bg-light bg-opacity-25 text-black content" style="margin-top: 12rem;">
+        <p><h1 class="text-warning">HELLO!, PLEASE PRESS THE BUTTON TO START</h1></p>
+        <div class="start-container d-grid col-6 mx-auto">
+          <button class="btn btn-lg btn-outline-warning start-btn text-center">
+            START THE QUIZ
+          </button>
+          <br>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="MusicChoice container bg-light bg-opacity-25 d-none" style="margin-top: 10rem;position: relative;">
+    <h2 class="display-2 my-4 text-warning text-center">Do you want it with music?</h2>
+  <div class="row">
+    <div class="d-grid col-6 mx-auto MusicChoice1">
+      <button class="btn btn-outline-danger btn-lg" type="button">Click here to asnwer without music</button>
+    </div>
+    <div class="d-grid col-6 mx-auto MusicChoice2">
+      <button class="btn btn-outline-success btn-lg" type="button">Double click for music</button>
+    </div>
+  </div>
+</div>
+<!-- STEP 2 -->
+<div class="text-center container form1 d-none">
+  <div class="row" style="margin-top: 10rem; 
+  background-color: transparent; margin-left: 10rem; margin-right: 10rem;">
+    <form class="col align-self-center content bg-light bg-opacity-25 form2">
+      <div class="form-group">
+        <br>
+        <label class="text-warning h5">Full Name:</label>
+        <br>
+        <input type="text" class="form-control" id="fname" placeholder="Last Name First Name">
+        <br>
+        <label class="text-warning h5">Email Address:</label>
+        <br>
+        <input type="text" class="form-control" id="email1"  placeholder="Eg.Example@email.com">
+        <br>
+        <small class=" text-warning h5">We'll never share your email with anyone else.</small>
+        <br><br>
+        <small class="alert alert-danger warning d-none" role="alert"></small>
+        <br><br>
+        <input type="submit" class="btn btn-lg btn-outline-warning text-center">
+        <br> <br>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Step 3 -->
+<div class="py-4 MathQuiz content d-none">
+  <div class="container bg-secondary bg-opacity-25">
+    <br>
+    <div class="hide">
+      <h2 class="display-2 my-4 text-warning text-center">MATH QUIZ</h2>
+    </div>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-4">
+            <h5 class="StudentName text-light text-decoration-underline"></h5>
+          </div>
+          <div class="col-md-4 offset-md-4">
+            <h5 class="StudentEmail text-light text-decoration-underline"></h5>
+          </div>
+        </div>
+      </div>
+      <h2 class="my-5 text-light">Direction: Please choose the correct answer.</h2>
+
+    <form action="" class="quiz1">
+    <!-- Q1 -->
+    <div class="my-5">
+      <p class="text-light h5 question">1. What is the square root of 121?</p>
+      <div class="form-check my-2 text-black-50">
+        <input type="radio" name="q1" value="A" id="q1A" class="btn-check"  checked>
+        <label for="q1A" class="btn btn-outline-secondary my-2 text-light h5">14</label>
+        <br>
+        <input type="radio" name="q1" value="B" id="q1B" class="btn-check" >
+        <label for="q1B" class="btn btn-outline-secondary my-2 text-light h5">12</label>
+        <br>
+        <input type="radio" name="q1" value="C" id="q1C" class="btn-check" >
+        <label for="q1C" class=" btn btn-outline-secondary my-2 text-light h5">13</label>
+        <br>
+        <input type="radio" name="q1" value="D" id="q1D" class="btn-check" >
+        <label for="q1D" class="btn btn-outline-secondary my-2 text-light h5">11</label>
+        <br>
+      </div>
+      <br>
+<!-- Q2 -->
+        <p class="text-light h5 question" >2. Combine terms: 12a + 26b - 4b - 16a.</p>
+        <div class="form-check my-2 text-black-50">
+          <input type="radio" name="q2" value="A" id="q2A" class="btn-check"  checked>
+          <label for="q2A" class="btn btn-outline-secondary my-2 text-light h5">4a + 22b</label>
+          <br>
+          <input type="radio" name="q2" value="B" id="q2B" class="btn-check" >
+          <label for="q2B" class="btn btn-outline-secondary my-2 text-light h5">-28a + 30b</label>
+          <br>
+          <input type="radio" name="q2" value="C" id="q2C" class="btn-check" >
+          <label for="q2C" class="btn btn-outline-secondary my-2 text-light h5">-4a + 22b</label>
+          <br>
+          <input type="radio" name="q2" value="D" id="q2D" class="btn-check" >
+          <label for="q2D" class="btn btn-outline-secondary my-2 text-light h5">28a + 30b</label>
+          <br>
+        </div>
+        <br>
+<!-- Q3 -->
+      <p class="text-light h5 question">3. Simplify: (4 - 5) - (13 - 18 + 2) </p>
+      <div class="form-check my-2 text-black-50">
+        <input type="radio" name="q3" value="A" id="q3A" class="btn-check"  checked>
+        <label for="q3A" class="btn btn-outline-secondary my-2 text-light h5">-1</label>
+        <br>
+        <input type="radio" name="q3" value="B" id="q3B" class="btn-check" >
+        <label for="q3B" class="btn btn-outline-secondary my-2 text-light h5">-2</label>
+        <br>
+        <input type="radio" name="q3" value="C" id="q3C" class="btn-check" >
+        <label for="q3C" class="btn btn-outline-secondary my-2 text-light h5">1</label>
+        <br>
+        <input type="radio" name="q3" value="D" id="q3D" class="btn-check" >
+        <label for="q3D" class="btn btn-outline-secondary my-2 text-light h5">2</label>
+        <br>
+      </div>
+<!-- Q4 -->
+      <p class="text-light h5 question">4. Multiply: (x - 4)(x + 5) </p>
+      <div class="form-check my-2 text-black-50">
+        <input type="radio" name="q4" value="A" id="q4A" class="btn-check"  checked>
+        <label for="q4A" class="btn btn-outline-secondary my-2 text-light h5">x^2 + 5x - 20</label>
+        <br>
+        <input type="radio" name="q4" value="B" id="q4B" class="btn-check" >
+        <label for="q4B" class="btn btn-outline-secondary my-2 text-light h5">x^2 - 4x - 20</label>
+        <br>
+        <input type="radio" name="q4" value="C" id="q4C" class="btn-check" >
+        <label for="q4C" class="btn btn-outline-secondary my-2 text-light h5">x^2 - x - 20</label>
+        <br>
+        <input type="radio" name="q4" value="D" id="q4D" class="btn-check" >
+        <label for="q4D" class="btn btn-outline-secondary my-2 text-light h5">x^2 + x - 20</label>
+        <br>
+      </div>
+<!-- Q5 -->
+<p class="text-light h5 question">5. Factor: 5x^2 - 15x - 20 </p>
+<div class="form-check my-2 text-black-50">
+  <input type="radio" name="q5" value="A" id="q5A" class="btn-check"  checked>
+  <label for="q5A" class="btn btn-outline-secondary my-2 text-light h5">5(x-4)(x+1)</label>
+  <br>
+  <input type="radio" name="q5" value="B" id="q5B" class="btn-check" >
+  <label for="q5B" class="btn btn-outline-secondary my-2 text-light h5">-2(x-4)(x+5)</label>
+  <br>
+  <input type="radio" name="q5" value="C" id="q5C" class="btn-check" >
+  <label for="q5C" class="btn btn-outline-secondary my-2 text-light h5">-5(x+4)(x-1)</label>
+  <br>
+  <input type="radio" name="q5" value="D" id="q5D" class="btn-check" >
+  <label for="q5D" class="btn btn-outline-secondary my-2 text-light h5">5(x+4)(x+1)</label>
+  <br>
+</div>
+<!-- Q6 -->
+<p class="text-light h5 question">6. Solve for x: 2x - y = (3/4)x + 6 </p>
+<div class="form-check my-2 text-black-50">
+  <input type="radio" name="q6" value="A" id="q6A" class="btn-check"  checked>
+  <label for="q6A" class="btn btn-outline-secondary my-2 text-light h5">(y + 6)/5</label>
+  <br>
+  <input type="radio" name="q6" value="B" id="q6B" class="btn-check" >
+  <label for="q6B" class="btn btn-outline-secondary my-2 text-light h5">4(y + 6)/5</label>
+  <br>
+  <input type="radio" name="q6" value="C" id="q6C" class="btn-check" >
+  <label for="q6C" class="btn btn-outline-secondary my-2 text-light h5">(y + 6)</label>
+  <br>
+  <input type="radio" name="q6" value="D" id="q6D" class="btn-check" >
+  <label for="q6D" class="btn btn-outline-secondary my-2 text-light h5">4(y - 6)/5</label>
+  <br>
+</div>
+<!-- Q7 -->
+<p class="text-light h5 question">7. Find the value of 3 + 2 • (8 - 3) </p>
+<div class="form-check my-2 text-black-50">
+  <input type="radio" name="q7" value="A" id="q7A" class="btn-check"  checked>
+  <label for="q7A" class="btn btn-outline-secondary my-2 text-light h5">25</label>
+  <br>
+  <input type="radio" name="q7" value="B" id="q7B" class="btn-check" >
+  <label for="q7B" class="btn btn-outline-secondary my-2 text-light h5">13</label>
+  <br>
+  <input type="radio" name="q7" value="C" id="q7C" class="btn-check" >
+  <label for="q7C" class="btn btn-outline-secondary my-2 text-light h5">17</label>
+  <br>
+  <input type="radio" name="q7" value="D" id="q7D" class="btn-check" >
+  <label for="q7D" class="btn btn-outline-secondary my-2 text-light h5">15</label>
+  <br>
+</div>
+<!-- Q8 -->
+<p class="text-light h5 question">8. If 1=3, 2=3, 3=5, 4=4; 5=4, then 6=? </p>
+<div class="form-check my-2 text-black-50">
+  <input type="radio" name="q8" value="A" id="q8A" class="btn-check"  checked>
+  <label for="q8A" class="btn btn-outline-secondary my-2 text-light h5">2</label>
+  <br>
+  <input type="radio" name="q8" value="B" id="q8B" class="btn-check" >
+  <label for="q8B" class="btn btn-outline-secondary my-2 text-light h5">5</label>
+  <br>
+  <input type="radio" name="q8" value="C" id="q8C" class="btn-check" >
+  <label for="q8C" class="btn btn-outline-secondary my-2 text-light h5">3</label>
+  <br>
+  <input type="radio" name="q8" value="D" id="q8D" class="btn-check" >
+  <label for="q8D" class="btn btn-outline-secondary my-2 text-light h5">4</label>
+  <br>
+</div>
+<!-- Q9 -->
+<p class="text-light h5 question">9. Joey had 6 siblings. All of them were born 2 years apart. The youngest is Chloe who is only 7 years old while Joey is the eldest. Calculate Joey's age. </p>
+<div class="form-check my-2 text-black-50">
+  <input type="radio" name="q9" value="A" id="q9A" class="btn-check"  checked>
+  <label for="q9A" class="btn btn-outline-secondary my-2 text-light h5">12</label>
+  <br>
+  <input type="radio" name="q9" value="B" id="q9B" class="btn-check" >
+  <label for="q9B" class="btn btn-outline-secondary my-2 text-light h5">18</label>
+  <br>
+  <input type="radio" name="q9" value="C" id="q9C" class="btn-check" >
+  <label for="q9C" class="btn btn-outline-secondary my-2 text-light h5">22</label>
+  <br>
+  <input type="radio" name="q9" value="D" id="q9D" class="btn-check" >
+  <label for="q9D" class="btn btn-outline-secondary my-2 text-light h5">19</label>
+  <br>
+</div>
+<!-- Q10 -->
+<p class="text-light h5 question">10. What is three fifth of 100?</p>
+<div class="form-check my-2 text-black-50">
+  <input type="radio" name="q10" value="A" id="q10A" class="btn-check"  checked>
+  <label for="q10A" class="btn btn-outline-secondary my-2 text-light h5">3</label>
+  <br>
+  <input type="radio" name="q10" value="B" id="q10B" class="btn-check" >
+  <label for="q10B" class="btn btn-outline-secondary my-2 text-light h5">5</label>
+  <br>
+  <input type="radio" name="q10" value="C" id="q10C" class="btn-check" >
+  <label for="q10C" class="btn btn-outline-secondary my-2 text-light h5">20</label>
+  <br>
+  <input type="radio" name="q10" value="D" id="q10D" class="btn-check" >
+  <label for="q10D" class="btn btn-outline-secondary my-2 text-light h5">60</label>
+  <br>
+</div>
+  <div class="start-container d-grid col-6 mx-auto">
+    <input type="submit" class="btn btn-lg btn-outline-warning text-center" value="Submit">
+  </div>
+  <br><br>
+    </div>
+  </form>
+  </div>
+</div>
+
+<div class="ScoreResult d-none container bg-light bg-opacity-25" style="margin-top: 10rem;position: relative;">
+  <div class="hide">
+    <h2 class="display-2 my-4 text-warning text-center">MATH QUIZ</h2>
+  </div>
+  <div class="text-center StudentScore text-light py-4">
+    <p class="display-3">You recieve a score of <span class="text-warning display-3 py-3"></span></p>
+  </div>
+  <div class="Response text-center">
+      <span></span>
+      <br><br><br>
+  </div>
+  <div class="row">
+    <div class="d-grid col-6 mx-auto">
+      <button class="btn btn-outline-danger btn-lg Home" type="button">Home</button>
+    </div>
+    <div class="d-grid col-6 mx-auto">
+      <button class="btn btn-outline-warning btn-lg NextQuiz" type="button">Next Quiz</button>
+    </div>
+  </div>
+</div>
+
+<!-- Step 4 -->
+<div class="py-4 ScienceQuiz d-none content" style="position: relative;">
+  <div class="container bg-secondary bg-opacity-25">
+    <br>
+    <div class="hide">
+      <h2 class="display-2 my-4 text-primary text-center">Science Quiz</h2>
+    </div>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-4">
+            <h5 class="StudentName1 text-light text-decoration-underline"></h5>
+          </div>
+          <div class="col-md-4 offset-md-4">
+            <h5 class="StudentEmail1 text-light text-decoration-underline"></h5>
+          </div>
+        </div>
+      </div>
+      <h2 class="my-5 text-light">Direction: Please choose the correct answer.</h2>
+
+    <form action="" class="quiz2">
+    <!-- Q1 -->
+    <div class="my-5">
+      <p class="text-light h5 question">1. Which animal lays eggs?</p>
+      <div class="form-check my-2 text-black-50">
+        <input type="radio" name="qS1" value="A" id="qS1A" class="btn-check"  checked>
+        <label for="qS1A" class="btn btn-outline-secondary my-2 text-light h5">Dog</label>
+        <br>
+        <input type="radio" name="qS1" value="B" id="qS1B" class="btn-check" >
+        <label for="qS1B" class="btn btn-outline-secondary my-2 text-light h5">Cat</label>
+        <br>
+        <input type="radio" name="qS1" value="C" id="qS1C" class="btn-check" >
+        <label for="qS1C" class=" btn btn-outline-secondary my-2 text-light h5">Duck</label>
+        <br>
+        <input type="radio" name="qS1" value="D" id="qS1D" class="btn-check" >
+        <label for="qS1D" class="btn btn-outline-secondary my-2 text-light h5">Sheep</label>
+        <br>
+      </div>
+      <br>
+<!-- Q2 -->
+        <p class="text-light h5 question" >2. Male cow is called?</p>
+        <div class="form-check my-2 text-black-50">
+          <input type="radio" name="qS2" value="A" id="qS2A" class="btn-check"  checked>
+          <label for="qS2A" class="btn btn-outline-secondary my-2 text-light h5">Ox</label>
+          <br>
+          <input type="radio" name="qS2" value="B" id="qS2B" class="btn-check" >
+          <label for="qS2B" class="btn btn-outline-secondary my-2 text-light h5">Dog</label>
+          <br>
+          <input type="radio" name="qS2" value="C" id="qS2C" class="btn-check" >
+          <label for="qS2C" class="btn btn-outline-secondary my-2 text-light h5">Sheep</label>
+          <br>
+          <input type="radio" name="qS2" value="D" id="qS2D" class="btn-check" >
+          <label for="qS2D" class="btn btn-outline-secondary my-2 text-light h5">Monkey</label>
+          <br>
+        </div>
+        <br>
+<!-- Q3 -->
+      <p class="text-light h5 question">3. All animals need food,air, and ______ to survive.</p>
+      <div class="form-check my-2 text-black-50">
+        <input type="radio" name="qS3" value="A" id="qS3A" class="btn-check"  checked>
+        <label for="qS3A" class="btn btn-outline-secondary my-2 text-light h5">House</label>
+        <br>
+        <input type="radio" name="qS3" value="B" id="qS3B" class="btn-check" >
+        <label for="qS3B" class="btn btn-outline-secondary my-2 text-light h5">Water</label>
+        <br>
+        <input type="radio" name="qS3" value="C" id="qS3C" class="btn-check" >
+        <label for="qS3C" class="btn btn-outline-secondary my-2 text-light h5">Chocolate</label>
+        <br>
+        <input type="radio" name="qS3" value="D" id="qS3D" class="btn-check" >
+        <label for="qS3D" class="btn btn-outline-secondary my-2 text-light h5">Fruits</label>
+        <br>
+      </div>
+<!-- Q4 -->
+      <p class="text-light h5 question">4. Which one is a fur-bearing animal?</p>
+      <div class="form-check my-2 text-black-50">
+        <input type="radio" name="qS4" value="A" id="qS4A" class="btn-check"  checked>
+        <label for="qS4A" class="btn btn-outline-secondary my-2 text-light h5">Hen</label>
+        <br>
+        <input type="radio" name="qS4" value="B" id="qS4B" class="btn-check" >
+        <label for="qS4B" class="btn btn-outline-secondary my-2 text-light h5">Crocodile</label>
+        <br>
+        <input type="radio" name="qS4" value="C" id="qS4C" class="btn-check" >
+        <label for="qS4C" class="btn btn-outline-secondary my-2 text-light h5">Tortoise</label>
+        <br>
+        <input type="radio" name="qS4" value="D" id="qS4D" class="btn-check" >
+        <label for="qS4D" class="btn btn-outline-secondary my-2 text-light h5">Cat</label>
+        <br>
+      </div>
+<!-- Q5 -->
+<p class="text-light h5 question">5. What is earth's only natural satellite</p>
+<div class="form-check my-2 text-black-50">
+  <input type="radio" name="qS5" value="A" id="qS5A" class="btn-check"  checked>
+  <label for="qS5A" class="btn btn-outline-secondary my-2 text-light h5">Sun</label>
+  <br>
+  <input type="radio" name="qS5" value="B" id="qS5B" class="btn-check" >
+  <label for="qS5B" class="btn btn-outline-secondary my-2 text-light h5">Mars</label>
+  <br>
+  <input type="radio" name="qS5" value="C" id="qS5C" class="btn-check" >
+  <label for="qS5C" class="btn btn-outline-secondary my-2 text-light h5">Venus</label>
+  <br>
+  <input type="radio" name="qS5" value="D" id="qS5D" class="btn-check" >
+  <label for="qS5D" class="btn btn-outline-secondary my-2 text-light h5">Moon</label>
+  <br>
+</div>
+<!-- Q6 -->
+<p class="text-light h5 question">6. The tree has a branch filled with green _____ </p>
+<div class="form-check my-2 text-black-50">
+  <input type="radio" name="qS6" value="A" id="qS6A" class="btn-check"  checked>
+  <label for="qS6A" class="btn btn-outline-secondary my-2 text-light h5">Hair</label>
+  <br>
+  <input type="radio" name="qS6" value="B" id="qS6B" class="btn-check" >
+  <label for="qS6B" class="btn btn-outline-secondary my-2 text-light h5">Root</label>
+  <br>
+  <input type="radio" name="qS6" value="C" id="qS6C" class="btn-check" >
+  <label for="qS6C" class="btn btn-outline-secondary my-2 text-light h5">Leaves</label>
+  <br>
+  <input type="radio" name="qS6" value="D" id="qS6D" class="btn-check" >
+  <label for="qS6D" class="btn btn-outline-secondary my-2 text-light h5">Trunk</label>
+  <br>
+</div>
+<!-- Q7 -->
+<p class="text-light h5 question">7. What part of the body helps you move? </p>
+<div class="form-check my-2 text-black-50">
+  <input type="radio" name="qS7" value="A" id="qS7A" class="btn-check"  checked>
+  <label for="qS7A" class="btn btn-outline-secondary my-2 text-light h5">Eyes</label>
+  <br>
+  <input type="radio" name="qS7" value="B" id="qS7B" class="btn-check" >
+  <label for="qS7B" class="btn btn-outline-secondary my-2 text-light h5">Lungs</label>
+  <br>
+  <input type="radio" name="qS7" value="C" id="qS7C" class="btn-check" >
+  <label for="qS7C" class="btn btn-outline-secondary my-2 text-light h5">Pancreas</label>
+  <br>
+  <input type="radio" name="qS7" value="D" id="qS7D" class="btn-check" >
+  <label for="qS7D" class="btn btn-outline-secondary my-2 text-light h5">Muscles</label>
+  <br>
+</div>
+<!-- Q8 -->
+<p class="text-light h5 question">8. The two holes of the nose are called? </p>
+<div class="form-check my-2 text-black-50">
+  <input type="radio" name="qS8" value="A" id="qS8A" class="btn-check"  checked>
+  <label for="qS8A" class="btn btn-outline-secondary my-2 text-light h5">Eyelids</label>
+  <br>
+  <input type="radio" name="qS8" value="B" id="qS8B" class="btn-check" >
+  <label for="qS8B" class="btn btn-outline-secondary my-2 text-light h5">Nostrils</label>
+  <br>
+  <input type="radio" name="qS8" value="C" id="qS8C" class="btn-check" >
+  <label for="qS8C" class="btn btn-outline-secondary my-2 text-light h5">Nails</label>
+  <br>
+  <input type="radio" name="qS8" value="D" id="qS8D" class="btn-check" >
+  <label for="qS8D" class="btn btn-outline-secondary my-2 text-light h5">Hair</label>
+  <br>
+</div>
+<!-- Q9 -->
+<p class="text-light h5 question">9. What star in the day and provides light? </p>
+<div class="form-check my-2 text-black-50">
+  <input type="radio" name="qS9" value="A" id="qS9A" class="btn-check"  checked>
+  <label for="qS9A" class="btn btn-outline-secondary my-2 text-light h5">Moon</label>
+  <br>
+  <input type="radio" name="qS9" value="B" id="qS9B" class="btn-check" >
+  <label for="qS9B" class="btn btn-outline-secondary my-2 text-light h5">Venus</label>
+  <br>
+  <input type="radio" name="qS9" value="C" id="qS9C" class="btn-check" >
+  <label for="qS9C" class="btn btn-outline-secondary my-2 text-light h5">Sun</label>
+  <br>
+  <input type="radio" name="qS9" value="D" id="qS9D" class="btn-check" >
+  <label for="qS9D" class="btn btn-outline-secondary my-2 text-light h5">Mars</label>
+  <br>
+</div>
+<!-- Q10 -->
+<p class="text-light h5 question">10. Legs have feet and arms have _____</p>
+<div class="form-check my-2 text-black-50">
+  <input type="radio" name="qS10" value="A" id="qS10A" class="btn-check"  checked>
+  <label for="qS10A" class="btn btn-outline-secondary my-2 text-light h5">Ankles</label>
+  <br>
+  <input type="radio" name="qS10" value="B" id="qS10B" class="btn-check" >
+  <label for="qS10B" class="btn btn-outline-secondary my-2 text-light h5">Pelvis</label>
+  <br>
+  <input type="radio" name="qS10" value="C" id="qS10C" class="btn-check" >
+  <label for="qS10C" class="btn btn-outline-secondary my-2 text-light h5">Hands</label>
+  <br>
+  <input type="radio" name="qS10" value="D" id="qS10D" class="btn-check" >
+  <label for="qS10D" class="btn btn-outline-secondary my-2 text-light h5">Skull</label>
+  <br>
+
+</div>
+  <div class="start-container col-6 mx-auto btn-lg text-center">
+    <input type="submit" class="btn btn-lg btn-outline-warning text-center" value="Submit">
+  </div>
+  <br><br>
+    </div>
+  </form>
+  </div>
+</div>
+
+<div class="ScoreResultSci container bg-light bg-opacity-25 d-none" style="margin-top: 10rem;position: relative;">
+  <div class="">
+    <h2 class="display-2 my-4 text-primary text-center">Science Quiz</h2>
+  </div>
+  <div class="text-center StudentScoreSci text-light py-4">
+    <p class="display-3">You recieve a score of <span class="text-warning display-3 py-3"></span></p>
+  </div>
+  <div class="Response2 text-center">
+    <span></span>
+    <br><br><br>
+</div>
+  <div class="text-center">
+      <button class="btn btn-outline-danger btn-lg Home1" type="button">Home</button>
+  </div>
+</div>
+
+<script src="prelim.js"></script>
+</body>
+</html>
